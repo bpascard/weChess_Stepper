@@ -28,13 +28,18 @@ vector<Position> position_parser(string cmd)
 	pch=strtok((char*)cmd.c_str()," ");
 	float a=0;
 	float b=0;
+	bool magnetState=0;
 	
 	while (pch!=NULL)
 	{
 		a=atof(pch); //to float;
 		pch=strtok(NULL," ");
-	    	b=atof(pch); //to float;
-	    	Position pos(a,b);
+	    b=atof(pch); //to float;
+
+	    if(a == 'x' && b =='x') magnetState=1;
+	    else if(a == 'y' && b == 'y') magnetState=0;
+
+	    Position pos(a,b,magnetState);
 		pos_list.push_back(pos);
 		pch=strtok(NULL," ");
 	}
@@ -79,13 +84,18 @@ int main(int argc, char **argv)
 	{	exit(1);
 	}
 	
-	
+    if(argc != 2){
+        cout << "incorrect no. of arguments" << "\n";
+        string cmd="0.5 0 0 1 0 0 2 0 0 0 2.5 0 0 0 4 0 0.5 0 0 0";
+        exit(1);
+    }
+	else string cmd(argv[1]);
 	
 	init_step();
 	
-	//return 0;
-	string cmd="0.5 0 0 1 0 0 2 0 0 0 2.5 0 0 0 4 0 0.5 0 0 0";
-	Position current;
+
+
+    Position current;
 	Position next;
 	Deplacement deplacement;
 	vector<Position> pos_list;
