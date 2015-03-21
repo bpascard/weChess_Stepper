@@ -36,10 +36,10 @@ vector<Position> position_parser(string cmd)
 		pch=strtok(NULL," ");
 	    b=atof(pch); //to float;
 
-	    if(a == 'x' && b =='x') magnetState=1;
-	    else if(a == 'y' && b == 'y') magnetState=0;
+	    //if(a == 'x' && b =='x') magnetState=1;
+	    //else if(a == 'y' && b == 'y') magnetState=0;
 
-	    Position pos(a,b,magnetState);
+	    Position pos(a,b);//,magnetState);
 		pos_list.push_back(pos);
 		pch=strtok(NULL," ");
 	}
@@ -89,7 +89,7 @@ int main(int argc, char **argv)
         string cmd="0.5 0 0 1 0 0 2 0 0 0 2.5 0 0 0 4 0 0.5 0 0 0";
         exit(1);
     }
-	else string cmd(argv[1]);
+	else cmd = argv[1];
 	
 	init_step();
 	
