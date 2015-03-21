@@ -83,10 +83,10 @@ int main(int argc, char **argv)
 	if( wiringPiSetup()==-1)
 	{	exit(1);
 	}
-	
+	string cmd="";
     if(argc != 2){
         cout << "incorrect no. of arguments" << "\n";
-        string cmd="0.5 0 0 1 0 0 2 0 0 0 2.5 0 0 0 4 0 0.5 0 0 0";
+        cmd="0.5 0 0 1 0 0 2 0 0 0 2.5 0 0 0 4 0 0.5 0 0 0";
         exit(1);
     }
 	else cmd = argv[1];
