@@ -67,9 +67,9 @@ void end_step(){
 void step(int num_pin)
 {
 	digitalWrite(num_pin,HIGH);
-	delayMicroseconds(1000);
+	delayMicroseconds(2000);
 	digitalWrite(num_pin,LOW);
-	delayMicroseconds(1000);
+	delayMicroseconds(2000);
 }
 
 void set_dir(int num_pin, int d){
