@@ -51,14 +51,21 @@ vector<Position> position_parser(string cmd)
 
 void init_step()
 {
+	//pas
 	pinMode(STEP_X, OUTPUT); 
 	pinMode(STEP_Y, OUTPUT);  
+	//direction
 	pinMode(DIR_X, OUTPUT);
 	pinMode(DIR_Y, OUTPUT);
+	//sleep
 	pinMode(SLEEP, OUTPUT);
+	
+	//electro-magnet
+	pinMode(EM_PIN, OUTPUT);
+	
 	digitalWrite(DIR_X,LOW);
 	digitalWrite(SLEEP,HIGH);
-	delay(1);
+	delay(500);
 }
 
 void end_step(){
