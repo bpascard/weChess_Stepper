@@ -85,11 +85,13 @@ int main(int argc, char **argv)
 	{	exit(1);
 	}
 
+	while(1){
+		digitalWrite(EM_PIN,HIGH);
+		delay(500);
+		digitalWrite(EM_PIN,LOW);
+		delay(500);
+	}
 	
-	digitalWrite(EM_PIN,HIGH);
-	delay(500);
-	digitalWrite(EM_PIN,LOW);
-	delay(500);
 
 	string cmd="";
     if(argc != 2){
