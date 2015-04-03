@@ -87,9 +87,9 @@ int main(int argc, char **argv)
 
 	
 	digitalWrite(EM_PIN,HIGH);
-	millis(500);
+	delay(500);
 	digitalWrite(EM_PIN,LOW);
-	millis(500);
+	delay(500);
 
 	string cmd="";
     if(argc != 2){
