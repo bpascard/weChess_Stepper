@@ -68,9 +68,9 @@ void end_step(){
 void step(int num_pin)
 {
 	digitalWrite(num_pin,HIGH);
-	delayMicroseconds(1000);
+	delayMicroseconds(2000);
 	digitalWrite(num_pin,LOW);
-	delayMicroseconds(1000);
+	delayMicroseconds(2000);
 }
 
 void set_dir(int num_pin, int d){
@@ -84,16 +84,17 @@ int main(int argc, char **argv)
 	if( wiringPiSetup()==-1)
 	{	exit(1);
 	}
+
 	
 	digitalWrite(EM_PIN,HIGH);
 	millis(500);
 	digitalWrite(EM_PIN,LOW);
 	millis(500);
 
-
+	string cmd="";
     if(argc != 2){
         cout << "incorrect no. of arguments" << "\n";
-        string cmd="0.5 0 0 1 0 0 2 0 0 0 2.5 0 0 0 4 0 0.5 0 0 0";
+        cmd="0.5 0 0 1 0 0 2 0 0 0 2.5 0 0 0 4 0 0.5 0 0 0";
         exit(1);
     }
 	else cmd = argv[1];
