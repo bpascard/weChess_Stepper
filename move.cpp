@@ -92,6 +92,7 @@ int main(int argc, char **argv)
 	{	exit(1);
 	}
 
+	init_step();
 	while(1){
 		digitalWrite(EM_PIN,HIGH);
 		delay(500);
