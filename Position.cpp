@@ -20,7 +20,3 @@ Position::Position(float a, float b, int em_state){
 	y=b;
 	isEM=em_state;
 }
-
-Position::Position(bool em_state){
-    isEM=em_state;
-}

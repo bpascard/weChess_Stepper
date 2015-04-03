@@ -17,7 +17,7 @@ class Position
 	
 	Position();
 	Position(float a, float b);
-	Position(float a, float b, bool em_state);
+	Position(float a, float b, int em_state);
 };
 
 
