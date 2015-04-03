@@ -14,7 +14,8 @@
 #define DIR_X 1 //BCM_GPIO 18
 #define STEP_Y 3 //BCM_GPIO 22
 #define DIR_Y 4 //BCM_GPIO 23
-#define SLEEP 2
+#define SLEEP 2 //
+#define EM_PIN 
 #define MS1 
 #define MS2 
 
