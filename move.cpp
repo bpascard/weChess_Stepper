@@ -15,9 +15,9 @@
 #define STEP_Y 3 //BCM_GPIO 22
 #define DIR_Y 4 //BCM_GPIO 23
 #define SLEEP 2 //
-#define EM_PIN 
-#define MS1 
-#define MS2 
+#define EM_PIN 5 
+//#define MS1 
+//#define MS2 
 
 using namespace std;
 
@@ -85,6 +85,12 @@ int main(int argc, char **argv)
 	{	exit(1);
 	}
 	
+	digitalWrite(EM_PIN,HIGH);
+	millis(500);
+	digitalWrite(EM_PIN,LOW);
+	millis(500);
+
+
     if(argc != 2){
         cout << "incorrect no. of arguments" << "\n";
         string cmd="0.5 0 0 1 0 0 2 0 0 0 2.5 0 0 0 4 0 0.5 0 0 0";
