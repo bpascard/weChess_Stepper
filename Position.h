@@ -13,7 +13,7 @@ class Position
 	public:
 	float x;
 	float y;
-	bool isEM;
+	int isEM;
 	
 	Position();
 	Position(float a, float b);

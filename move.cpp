@@ -37,10 +37,10 @@ vector<Position> position_parser(string cmd)
 		pch=strtok(NULL," ");
 	    b=atof(pch); //to float;
 
-	    //if(a == 'x' && b =='x') magnetState=1;
-	    //else if(a == 'y' && b == 'y') magnetState=0;
+	    if(a == 'x' && b =='x') magnetState=1;
+	    else if(a == 'y' && b == 'y') magnetState=0;
 
-	    Position pos(a,b);//,magnetState);
+	    Position pos(a,b,magnetState);
 		pos_list.push_back(pos);
 		pch=strtok(NULL," ");
 	}
@@ -92,6 +92,7 @@ int main(int argc, char **argv)
 	{	exit(1);
 	}
 
+	/*
 	init_step();
 	while(1){
 		digitalWrite(EM_PIN,HIGH);
@@ -99,7 +100,7 @@ int main(int argc, char **argv)
 		digitalWrite(EM_PIN,LOW);
 		delay(500);
 	}
-	
+	*/
 
 	string cmd="";
     if(argc != 2){
@@ -140,9 +141,13 @@ int main(int argc, char **argv)
 			}
 			
 		}
+
 		cout << "---------------------\n";
-		current = next;
+		if(next.isEM==1) digitalWrite(EM_PIN,HIGH);
+			else 
+		current = next; digitalWrite(EM_PIN,LOW);
 		delay(500);
+
 	}
 	end_step();
 	return 0;

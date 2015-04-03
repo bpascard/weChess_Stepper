@@ -15,8 +15,12 @@ Position::Position(float a, float b){
 	isEM=0; 	
 };
 
-Position::Position(float a, float b, bool em_state){
+Position::Position(float a, float b, int em_state){
 	x=a;
 	y=b;
 	isEM=em_state;
+}
+
+Position::Position(bool em_state){
+    isEM=em_state;
 }
