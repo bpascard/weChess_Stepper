@@ -37,10 +37,10 @@ vector<Position> position_parser(string cmd)
 		pch=strtok(NULL," ");
 	    b=atof(pch); //to float;
 
-	    if(a == 'x' && b =='x'){
+	    if(pch[0] =='x'){
 	    	magnetState=1;
 	    }
-	    else if(a == 'y' && b == 'y'){
+	    else if(pch[0] == 'y'){
 	    	magnetState=0;
 	    }
 
@@ -150,8 +150,8 @@ int main(int argc, char **argv)
 
 		cout << "---------------------\n";
 		if(next.isEM==1) digitalWrite(EM_PIN,HIGH);
-			else 
-		current = next; digitalWrite(EM_PIN,LOW);
+			else digitalWrite(EM_PIN,LOW);
+		current = next;
 		delay(500);
 
 	}
