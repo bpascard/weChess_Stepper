@@ -17,7 +17,8 @@ class Position
 	
 	Position();
 	Position(float a, float b);
-	Position(float a, float b, int em_state);
+    Position(int em_state);
+    bool Position::isEMCommand()
 };
 
 
