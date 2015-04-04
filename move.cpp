@@ -37,11 +37,16 @@ vector<Position> position_parser(string cmd)
 		pch=strtok(NULL," ");
 	    b=atof(pch); //to float;
 
-	    if(a == 'x' && b =='x') magnetState=1;
-	    else if(a == 'y' && b == 'y') magnetState=0;
+	    if(a == 'x' && b =='x'){
+	    	magnetState=1;
+	    }
+	    else if(a == 'y' && b == 'y'){
+	    	magnetState=0;
+	    }
 
 	    Position pos(a,b,magnetState);
 		pos_list.push_back(pos);
+		cout << "Go to " << a << ":" << b << "magnet "<< magnetState << "\n";
 		pch=strtok(NULL," ");
 	}
 	
