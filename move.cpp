@@ -154,7 +154,7 @@ int main(int argc, char **argv)
 			deplacement.computeFromPos(current,next);
 
 			set_dir(DIR_X,deplacement.dx);
-			set_dir(DIR_Y,deplacement.dy);
+			set_dir(DIR_Y,-deplacement.dy);
 			delayMicroseconds(1000);
 			cout << deplacement.nb_step << " pas\n";
 			for(int x=0; x<deplacement.nb_step;x++){
