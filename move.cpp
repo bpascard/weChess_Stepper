@@ -29,12 +29,13 @@ vector<Position> position_parser(string cmd)
 	pch=strtok((char*)cmd.c_str()," ");
 	float a=0;
 	float b=0;
-	bool magnetState=0;
+	int magnetState=0;
+	Position pos;
 	
 	while (pch!=NULL)
 	{
-		a=atof(pch); //to float;
-		pch=strtok(NULL," ");
+	    a=atof(pch); //to float;
+	    pch=strtok(NULL," ");
 	    b=atof(pch); //to float;
 
 	    if(pch[0] =='x'){
@@ -43,9 +44,10 @@ vector<Position> position_parser(string cmd)
 	    else if(pch[0] == 'y'){
 	    	magnetState=0;
 	    }
-
-	    Position pos(a,b,magnetState);
-		pos_list.push_back(pos);
+            else{
+	    }
+	    pos = Position(a,b,magnetState);
+	    pos_list.push_back(pos);
 		cout << "Go to " << a << ":" << b << "magnet "<< magnetState << "\n";
 		pch=strtok(NULL," ");
 	}
@@ -70,6 +72,8 @@ void init_step()
 	
 	digitalWrite(DIR_X,LOW);
 	digitalWrite(DIR_Y,HIGH);
+	
+	//wake up motors
 	digitalWrite(SLEEP,HIGH);
 	delay(500);
 }
@@ -98,8 +102,8 @@ int main(int argc, char **argv)
 	{	exit(1);
 	}
 
-	/*
-	init_step();
+	
+	/*init_step();
 	while(1){
 		digitalWrite(EM_PIN,HIGH);
 		delay(500);
