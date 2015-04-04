@@ -15,6 +15,12 @@ Position::Position(float a, float b){
 	isEM=0; 	
 };
 
+Position::Position(float a, float b, int em){
+    x=a;
+    y=b;
+    isEM=0;     
+};
+
 Position::Position(int em_state){
 	isEM=em_state;
 }
