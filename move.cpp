@@ -64,7 +64,7 @@ void init_step()
 	pinMode(EM_PIN, OUTPUT);
 	
 	digitalWrite(DIR_X,LOW);
-	digitalWrite(DIR_Y,LOW);
+	digitalWrite(DIR_Y,HIGH);
 	digitalWrite(SLEEP,HIGH);
 	delay(500);
 }
