@@ -149,8 +149,14 @@ int main(int argc, char **argv)
 		}
 
 		cout << "---------------------\n";
-		if(next.isEM==1) digitalWrite(EM_PIN,HIGH);
-			else digitalWrite(EM_PIN,LOW);
+		if(next.isEM==1){
+			digitalWrite(EM_PIN,HIGH);
+			cout << "EM ON!\n";
+		}
+		else{
+			digitalWrite(EM_PIN,LOW);
+			cout << "EM OFF!\n";
+		}
 		current = next;
 		delay(500);
 
