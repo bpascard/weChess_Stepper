@@ -2,10 +2,10 @@
 #define POSITION_H
 
 #define SIZE_SQUARE_MM 40
-#define SIZE_STEP_MM 0.34
+#define SIZE_STEP_MM 0.19
 #define SIZE_DIAG_STEP_MM 0.95
 
-
+//////////
 using namespace std;
 
 class Position
