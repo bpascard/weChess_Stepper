@@ -11,7 +11,8 @@ class Deplacement
    float dx;
    float dy;
    int nb_step;
-   float distance_mm;
+   int reste;
+   double distance_mm;
    
    Deplacement();
    
