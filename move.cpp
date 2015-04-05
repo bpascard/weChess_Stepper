@@ -88,9 +88,9 @@ void end_step(){
 void step(int num_pin)
 {
 	digitalWrite(num_pin,HIGH);
-	delayMicroseconds(2000);
+	delayMicroseconds(4000);
 	digitalWrite(num_pin,LOW);
-	delayMicroseconds(2000);
+	delayMicroseconds(4000);
 }
 
 void set_dir(int num_pin, int d){
@@ -127,7 +127,7 @@ int main(int argc, char **argv)
 	
 
 
-	Position current;
+	Position current(0.5,0.5);
 	Position next;
 	Deplacement deplacement;
 	vector<Position> pos_list;
@@ -153,7 +153,7 @@ int main(int argc, char **argv)
 		else{
 			deplacement.computeFromPos(current,next);
 
-			set_dir(DIR_X,-deplacement.dx);
+			set_dir(DIR_X,deplacement.dx);
 			set_dir(DIR_Y,deplacement.dy);
 			delayMicroseconds(1000);
 			cout << deplacement.nb_step << " pas\n";
