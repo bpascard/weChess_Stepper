@@ -1,4 +1,5 @@
-
+#include <stdlib.h>
+#include <iostream>
 #include "Deplacement.h"
 #include "Position.h"
 #include <math.h>
