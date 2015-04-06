@@ -93,7 +93,7 @@ void step(int num_pin)
 	delayMicroseconds(4000);
 }
 
-void set_dir(int num_pin, int d){
+void set_dir(int num_pin, float d){
 	if(d>0) digitalWrite(num_pin,HIGH);
 	else if(d<0) digitalWrite(num_pin,LOW);
 	cout << "d" << num_pin << ":" << d << "\n";
@@ -106,7 +106,15 @@ int main(int argc, char **argv)
 		}
 
 
-	/*init_step();
+/*	init_step();
+    int k=0;
+	while(k!=100){
+        step(STEP_Y);
+        k++;
+	}
+    end_step();
+    return 0;*/
+/*init_step();
 	while(1){
 		digitalWrite(EM_PIN,HIGH);
 		delay(500);
@@ -153,7 +161,7 @@ int main(int argc, char **argv)
 		else{
 			deplacement.computeFromPos(current,next);
 
-			set_dir(DIR_X,deplacement.dx);
+			set_dir(DIR_X,-deplacement.dx);
 			set_dir(DIR_Y,deplacement.dy);
 			delayMicroseconds(1000);
 			cout << deplacement.nb_step << " pas\n";
