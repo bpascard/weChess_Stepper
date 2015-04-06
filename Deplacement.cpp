@@ -29,7 +29,8 @@ using namespace std;
 		this->dx=b.x-a.x;
 		this->dy=b.y-a.y;
 		cout << "origine x/y : " << a.x <<"/"<<a.y << "\narrivée x/y :" << b.x << "/" <<b.y << "\n"; 
-		
+		cout << "dx : " << this->dx;
+		cout << "\ndy : " << this->dy;
 		
 		this->distance_mm = (a.x-b.x)*(a.x-b.x)+(a.y-b.y)*(a.y-b.y);
 		this->distance_mm = sqrtf(distance_mm);
