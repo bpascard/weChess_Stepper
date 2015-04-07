@@ -13,7 +13,6 @@ using namespace std;
     dy=0;
     nb_step_X=0;
     nb_step_Y=0;
-    distance_mm=0;
     pas_restant_X=0;
     pas_restant_Y=0;
    };
@@ -40,7 +39,8 @@ using namespace std;
 		if(!dx || !dy) this->nb_step = distance_mm / SIZE_STEP_MM;
 		else this->nb_step = distance_mm / SIZE_DIAG_STEP_MM;
     */
-		cout << "Distance en mm : " << this->distance_mm << "\n";
+		cout << "Distance en mm (X) : " << this->distance_mm_X << "\n";
+    cout << "Distance en mm (Y) : " << this->distance_mm_Y << "\n";
    };
    
    
