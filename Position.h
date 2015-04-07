@@ -2,8 +2,8 @@
 #define POSITION_H
 
 #define SIZE_SQUARE_MM 40
-#define SIZE_STEP_MM 0.18
-#define SIZE_DIAG_STEP_MM 0.95
+#define SIZE_STEP_MM 0.23
+#define SIZE_DIAG_STEP_MM SIZE_STEP_MM*1.41421356237
 
 //////////
 using namespace std;

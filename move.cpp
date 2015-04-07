@@ -87,10 +87,10 @@ void end_step(){
 
 void step(int num_pin)
 {
-	digitalWrite(num_pin,HIGH);
-	delayMicroseconds(4000);
 	digitalWrite(num_pin,LOW);
-	delayMicroseconds(4000);
+	delayMicroseconds(2000);
+	digitalWrite(num_pin,HIGH);
+	delayMicroseconds(2000);
 }
 
 void set_dir(int num_pin, float d){
@@ -156,6 +156,7 @@ int main(int argc, char **argv)
 				digitalWrite(EM_PIN,LOW);
 				cout << "EM OFF!\n";
 			}
+			delay(1000);
 		}
 		//Commande moteurs
 		else{
@@ -163,7 +164,7 @@ int main(int argc, char **argv)
 
 			set_dir(DIR_X,-deplacement.dx);
 			set_dir(DIR_Y,deplacement.dy);
-			delayMicroseconds(1000);
+			//delayMicroseconds(1000);
 			cout << deplacement.nb_step << " pas\n";
 			for(int x=0; x<deplacement.nb_step;x++){
 				if(deplacement.dx){
