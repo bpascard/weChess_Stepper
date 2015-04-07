@@ -176,7 +176,7 @@ int main(int argc, char **argv)
 				}
 				if(deplacement.pas_restant_Y>0){
 					step(STEP_Y);
-					deplacement.pas_restant_X--;
+					deplacement.pas_restant_Y--;
 					cout << deplacement.pas_restant_Y << " pas restant (Y)\n";
 				}
 
