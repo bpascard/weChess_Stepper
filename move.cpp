@@ -167,14 +167,14 @@ int main(int argc, char **argv)
 			//delayMicroseconds(1000);
 			cout << deplacement.nb_step_X << " pas (X)\n";
 			cout << deplacement.nb_step_Y << " pas (Y)\n";
-			while(deplacement.pas_restant_X || deplacement.pas_restant_Y){
-				if(deplacement.pas_restant_X){
+			while(deplacement.pas_restant_X>0 || deplacement.pas_restant_Y>0){
+				if(deplacement.pas_restant_X>0){
 					step(STEP_X);
 					deplacement.pas_restant_X--;
 				//cout << "step!\n";
 
 				}
-				if(deplacement.pas_restant_Y){
+				if(deplacement.pas_restant_Y>0){
 					step(STEP_Y);
 					deplacement.pas_restant_X--;
 				}
