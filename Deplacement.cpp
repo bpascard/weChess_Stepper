@@ -25,8 +25,8 @@ using namespace std;
 		cout << "\ndy : " << this->dy;
 		
     //
-    double distance_mm_X = this->dx * SIZE_SQUARE_MM;
-    double distance_mm_Y = this->dy * SIZE_SQUARE_MM;
+    double distance_mm_X = abs(this->dx) * SIZE_SQUARE_MM;
+    double distance_mm_Y = abs(this->dy) * SIZE_SQUARE_MM;
 
     this->pas_restant_X = distance_mm_X / SIZE_STEP_MM;
     this->pas_restant_Y = distance_mm_Y / SIZE_STEP_MM;
