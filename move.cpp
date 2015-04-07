@@ -171,13 +171,13 @@ int main(int argc, char **argv)
 				if(deplacement.pas_restant_X>0){
 					step(STEP_X);
 					deplacement.pas_restant_X--;
-					cout << deplacement.pas_restant_X << " pas restant (X)\n";
+					//cout << deplacement.pas_restant_X << " pas restant (X)\n";
 
 				}
 				if(deplacement.pas_restant_Y>0){
 					step(STEP_Y);
 					deplacement.pas_restant_Y--;
-					cout << deplacement.pas_restant_Y << " pas restant (Y)\n";
+					//cout << deplacement.pas_restant_Y << " pas restant (Y)\n";
 				}
 
 			}
