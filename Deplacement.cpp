@@ -11,18 +11,11 @@ using namespace std;
    {
     dx=0;
     dy=0;
-    nb_step=0;
+    nb_step_X=0;
+    nb_step_Y=0;
     distance_mm=0;
-    reste=0;
-   };
-   
-   Deplacement::Deplacement(float a, float b, int n)
-   {
-    dx=a;
-    dy=b;
-    nb_step=n;
-    reste=n;
-    distance_mm=sqrtf(dx*dx+dy*dy);
+    pas_restant_X=0;
+    pas_restant_Y=0;
    };
    
    void Deplacement::computeFromPos(Position a, Position b){
@@ -32,11 +25,21 @@ using namespace std;
 		cout << "dx : " << this->dx;
 		cout << "\ndy : " << this->dy;
 		
+    //
+    double distance_mm_X = this->dx * SIZE_SQUARE_MM;
+    double distance_mm_Y = this->dy * SIZE_SQUARE_MM;
+
+    this->pas_restant_X = distance_mm_X / SIZE_STEP_MM;
+    this->pas_restant_Y = distance_mm_Y / SIZE_STEP_MM;
+    this->nb_step_X = this->pas_restant_X;
+    this->nb_step_Y = this->pas_restant_Y;
+    /*
 		this->distance_mm = (a.x-b.x)*(a.x-b.x)+(a.y-b.y)*(a.y-b.y);
 		this->distance_mm = sqrtf(distance_mm);
 		this->distance_mm = ceil(distance_mm * SIZE_SQUARE_MM);
 		if(!dx || !dy) this->nb_step = distance_mm / SIZE_STEP_MM;
 		else this->nb_step = distance_mm / SIZE_DIAG_STEP_MM;
+    */
 		cout << "Distance en mm : " << this->distance_mm << "\n";
    };
    

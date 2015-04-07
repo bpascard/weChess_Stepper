@@ -166,14 +166,16 @@ int main(int argc, char **argv)
 			set_dir(DIR_Y,deplacement.dy);
 			//delayMicroseconds(1000);
 			cout << deplacement.nb_step << " pas\n";
-			for(int x=0; x<deplacement.nb_step;x++){
-				if(deplacement.dx){
+			while(deplacement.pas_restant_X || deplacement.pas_restant_Y){
+				if(deplacement.pas_restant_X){
 					step(STEP_X);
+					deplacement.pas_restant_X--;
 				//cout << "step!\n";
 
 				}
-				if(deplacement.dy){
+				if(deplacement.pas_restant_Y){
 					step(STEP_Y);
+					deplacement.pas_restant_X--;
 				}
 
 			}
