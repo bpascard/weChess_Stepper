@@ -10,13 +10,13 @@ class Deplacement
    public:
    float dx;
    float dy;
-   int nb_step;
    int reste;
-   double distance_mm;
+   unsigned int nb_step_X;
+   unsigned int nb_step_Y;
+   unsigned int pas_restant_X;
+   unsigned int pas_restant_Y;
    
    Deplacement();
-   
-   Deplacement(float a, float b, int n);
    
    void computeFromPos(Position a, Position b);
 };
