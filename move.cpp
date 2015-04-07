@@ -135,7 +135,7 @@ int main(int argc, char **argv)
 	
 
 
-	Position current(0.5,8.5);
+	Position current(0.5,0.5);
 	Position next;
 	Deplacement deplacement;
 	vector<Position> pos_list;
