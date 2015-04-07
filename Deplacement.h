@@ -11,10 +11,10 @@ class Deplacement
    float dx;
    float dy;
    int reste;
-   unsigned int nb_step_X;
-   unsigned int nb_step_Y;
-   unsigned int pas_restant_X;
-   unsigned int pas_restant_Y;
+   int nb_step_X;
+   int nb_step_Y;
+   int pas_restant_X;
+   int pas_restant_Y;
    
    Deplacement();
    
