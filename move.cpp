@@ -156,7 +156,7 @@ int main(int argc, char **argv)
 				digitalWrite(EM_PIN,LOW);
 				cout << "EM OFF!\n";
 			}
-			delay(1000);
+			delay(100);
 		}
 		//Commande moteurs
 		else{
