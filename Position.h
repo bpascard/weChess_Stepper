@@ -2,7 +2,7 @@
 #define POSITION_H
 
 #define SIZE_SQUARE_MM 40
-#define SIZE_STEP_MM 0.23
+#define SIZE_STEP_MM 0.21
 #define SIZE_DIAG_STEP_MM 0.95
 
 //////////
